@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "CRXJS Vue Vite Example",
+  "version": "1.0.0",
+  "action": { "default_popup": "src/popup/popup.html" },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "chrome_url_overrides": { "newtab": "src/newtab/newtab.html" }
+}

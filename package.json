@@ -1,0 +1,23 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "pinia": "^2.1.6",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "2.0.0-beta.19",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "pug": "^3.0.2",
+    "vite": "^4.4.5",
+    "vue-pug-plugin": "^2.0.3",
+    "webextension-polyfill": "^0.10.0"
+  }
+}
