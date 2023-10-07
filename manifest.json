@@ -4,7 +4,48 @@
   "version": "1.0.0",
   "action": { "default_popup": "src/popup/popup.html" },
   "background": {
-    "service_worker": "src/background.js"
+    "service_worker": "src/background/background.js"
   },
-  "chrome_url_overrides": { "newtab": "src/newtab/newtab.html" }
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "_favicon/*",
+        "assets/*",
+        "src/*",
+        "src/**/*",
+        "src/**/**/*"
+      ],
+      "matches": ["\u003Call_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["src/contentScript/contentScript.js"]
+    }
+  ],
+  "chrome_url_overrides": { "newtab": "src/newtab/newtab.html" },
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "contextMenus",
+    "history",
+    "alarms",
+    "notifications",
+    "bookmarks",
+    "topSites",
+    "downloads",
+    "unlimitedStorage",
+    "declarativeNetRequestWithHostAccess",
+    "favicon"
+  ],
+  "host_permissions": ["*://*/*"],
+  "optional_permissions": [],
+  "icons": {
+    "16": "assets/icon_128.png",
+    "32": "assets/icon_128_white.png",
+    "48": "assets/icon_128.png",
+    "128": "assets/icon_128.png"
+  }
 }

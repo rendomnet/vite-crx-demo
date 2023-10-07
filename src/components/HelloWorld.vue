@@ -3,7 +3,7 @@ h1 {{ msg }}
 .card
   button(type="button", @click="count++") count is {{ count }}
   p
-    | Edit
+    | Edit2
     code components/HelloWorld.vue
     | to test HMR
 p
